@@ -331,7 +331,7 @@ int mbedtls_net_recv( void *ctx, unsigned char *buf, size_t len )
         return ( MBEDTLS_ERR_NET_INVALID_CONTEXT );
     }
 
-    ret = (int) read( fd, buf, len );
+    ret = (int) recv( fd, buf, len, 0);
 
     if ( ret < 0 ) {
         if ( net_would_block( ctx ) != 0 ) {
@@ -404,7 +404,7 @@ int mbedtls_net_send( void *ctx, const unsigned char *buf, size_t len )
         return ( MBEDTLS_ERR_NET_INVALID_CONTEXT );
     }
 
-    ret = (int) write( fd, buf, len );
+    ret = (int) send( fd, buf, len, 0);
 
     if ( ret < 0 ) {
         if ( net_would_block( ctx ) != 0 ) {

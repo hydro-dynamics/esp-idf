@@ -873,7 +873,7 @@ u32_t lwip_hook_tcp_isn(const struct ip_addr *local_ip, u16_t local_port,
 #define ESP_PBUF                        1
 #define ESP_PPP                         1
 #define ESP_IPV6                        1
-#define ESP_SOCKET                      1
+#define ESP_SOCKET                      0
 #define ESP_LWIP_SELECT                 1
 #define ESP_LWIP_LOCK                   1
 #define ESP_THREAD_PROTECTION           1
